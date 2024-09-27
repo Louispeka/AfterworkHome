@@ -1,0 +1,291 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; /* Inclut paddings et bordures dans la largeur */
+}
+
+html, body {
+   height: 100%; /* Assure que le corps prend toute la hauteur */
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: white; /* Couleur de fond */
+   color: black; /* Couleur du texte */
+   overflow-x: hidden; /* Masque les débordements horizontaux */
+}
+
+.container {
+   max-width: 1200px; /* Limite la largeur pour les grands écrans */
+   margin: 0 auto; /* Centre le conteneur */
+   padding: 0 15px; /* Un peu de padding sur les côtés */
+}
+
+header {
+   display: flex;
+   justify-content: center; /* Centre tous les éléments horizontalement */
+   align-items: center; /* Centre verticalement */
+   padding: 10px 20px; /* Ajuste le padding si nécessaire */
+   background-color: white; /* Couleur de fond du header */
+}
+#logo {
+   height: 150px; /* Ajuste la hauteur du logo */
+   cursor: pointer;
+   margin: auto;
+}
+
+.banner {
+   text-align: center;
+   padding: 50px;
+   background-color: rgb(37, 150, 190); /* Couleur de fond */
+}
+
+#welcome-text {
+   font-size: 36px; /* Taille réduite du texte */
+   color: white; /* Couleur du texte */
+}
+
+.description {
+   text-align: center;
+   padding: 20px;
+}
+
+#darkModeToggle {
+   background-color: #231245; /* Couleur du bouton */
+   color: rgb(255, 255, 255); /* Couleur du texte */
+   border: none;
+   padding: 10px 20px; /* Padding du bouton */
+   cursor: pointer;
+}
+
+/* Mode sombre */
+body.dark-mode {
+   background-color: #231245; /* Couleur de fond en mode sombre */
+   color: rgb(0, 0, 0); /* Couleur du texte en mode sombre */
+}
+
+header.dark-mode {
+   background-color: #231245; /* Couleur du header en mode sombre */
+}
+
+.dark-mode #logo {
+   content: url('logonoir.png'); /* Logo en mode sombre */
+}
+
+.dark-mode .banner {
+   background-color: #444; /* Couleur de fond de la bannière en mode sombre */
+}
+
+.dark-mode #welcome-text {
+   color: #ddd; /* Couleur du texte en mode sombre */
+}
+
+footer {
+   background-color: rgb(39, 21, 73); /* Couleur du footer */
+   color: #fff; /* Couleur du texte */
+   text-align: center;
+   padding: 20px;
+   bottom: 0;
+   width: 100%; /* Assure que le footer prend toute la largeur */
+}
+
+footer a {
+   color: #fff; /* Lien en blanc */
+   text-decoration: none; /* Pas de soulignement */
+}
+
+footer a:hover {
+   text-decoration: underline; /* Souligne au survol */
+}
+
+.footer-content p {
+   margin: 5px 0; /* Marge entre les paragraphes */
+}
+
+.welcome-banner {
+   background-color: #241E4E; 
+   color: white; /* Couleur du texte */
+   padding: 50px 20px; /* Padding autour de la bannière */
+   text-align: center;
+   font-size: 36px; /* Taille de la police */
+   font-weight: bold;
+   position: relative;
+   width: 100%; /* Prend toute la largeur */
+   margin-top: 20px; /* Espace au-dessus */
+}
+
+.welcome-banner h1 {
+   margin: 0; /* Supprime la marge par défaut */
+   font-size: 36px; /* Taille du texte */
+   text-transform: uppercase; /* Met le texte en majuscules */
+}
+
+.welcome-banner::before {
+   content: ""; /* Crée un élément avant */
+   background-color: #FFF200; /* Couleur jaune */
+   position: absolute;
+   left: 20px; /* Positionne à gauche */
+   top: 50%; /* Centre verticalement */
+   width: 30px; /* Largeur de la bande */
+   height: 30px; /* Hauteur de la bande */
+   transform: translateY(-50%); /* Ajuste pour centrer */
+}
+
+.project-description {
+   margin: 20px auto; /* Marge pour centrer */
+   max-width: 900px; /* Largeur maximale */
+   padding: 20px; /* Padding autour du texte */
+   font-size: 18px; /* Taille de la police */
+   color: #333; /* Couleur du texte */
+   line-height: 1.6; /* Interligne */
+   text-align: center; /* Centre le texte */
+}
+
+.project-description p {
+   margin: 0; /* Supprime la marge par défaut */
+   font-size: 20px; /* Taille de la police */
+   color: #4a4a4a; /* Couleur douce */
+}
+
+.bar-container {
+   position: relative; /* Position relative pour le conteneur */
+   width: 100%; /* Prend toute la largeur de la fenêtre */
+   height: 400px; /* Ajuste la hauteur selon tes besoins */
+   overflow: hidden; /* Masque les débordements */
+   display: flex; /* Flexbox pour centrer le contenu */
+   justify-content: center; /* Centre horizontalement */
+   align-items: center; /* Centre verticalement */
+   margin-bottom: 20px; /* Espace entre la photo et le footer */
+}
+
+.bar-image {
+   width: 100%; /* L'image prend toute la largeur */
+   height: 100%; /* L'image prend toute la hauteur du conteneur */
+   object-fit: cover; /* Assure que l'image couvre tout le conteneur */
+   position: absolute; /* Positionne l'image sur le conteneur */
+   top: 50%; /* Centre verticalement */
+   left: 50%; /* Centre horizontalement */
+   transform: translate(-50%, -50%); /* Ajuste pour centrer précisément */
+   transition: transform 0.5s ease; /* Animation lors du zoom */
+}
+
+.bar-container:hover .bar-image {
+   transform: translate(-50%, -50%) scale(1.1); /* Zoom léger au survol */
+}
+
+.bar-name {
+   position: absolute; /* Positionne le texte sur l'image */
+   top: 50%; /* Centre verticalement */
+   left: 50%; /* Centre horizontalement */
+   transform: translate(-50%, -50%); /* Ajuste pour centrer précisément */
+   color: white; /* Couleur du texte */
+   font-size: 3em; /* Taille de la police */
+   font-weight: bold; /* Épaisseur de la police */
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre du texte */
+   padding: 10px 20px; /* Espacement autour du texte */
+   background-color: rgba(0, 0, 0, 0.6); /* Rectangle opaque léger (noir avec transparence) */
+   border-radius: 10px; /* Coins arrondis pour le rectangle */
+   text-align: center; /* Centre le texte */
+}
+
+.bar-container a {
+   color: inherit; /* Prend la couleur héritée */
+   text-decoration: none; /* Pas de soulignement */
+   float: right; /* Positionne à droite */
+}
+
+#barLoginModal {
+   display: none; /* Masqué par défaut */
+   position: fixed; /* Position fixe */
+   z-index: 1; /* Au-dessus des autres éléments */
+   left: 0; /* À gauche */
+   top: 0; /* En haut */
+   width: 100%; /* Prend toute la largeur */
+   height: 100%; /* Prend toute la hauteur */
+   overflow: auto; /* Ajoute le défilement si nécessaire */
+   background-color: rgba(0,0,0,0.4); /* Fond semi-transparent */
+   padding-top: 60px; /* Espace en haut */
+}
+
+.modal-content {
+   background-color: #fefefe; /* Fond du modal */
+   margin: 5% auto; /* Centre le modal */
+   padding: 20px; /* Espacement intérieur */
+   border: 1px solid #888; /* Bordure */
+   width: 80%; /* Largeur */
+}
+
+
+
+.banner {
+   background-color: rgb(39, 21, 73); /* Couleur de fond de la bannière */
+   color: white;
+   text-align: center;
+   padding: 30px 20px; /* Ajuste le padding */
+}
+
+.hours-table {
+   width: 50%; /* Largeur du tableau */
+   margin: 20px auto; /* Centre le tableau horizontalement */
+   border-collapse: collapse; /* Supprime les espacements entre les bordures */
+}
+
+.hours-table th, .hours-table td {
+   border: 1px solid #ddd; /* Bordure pour chaque cellule */
+   padding: 2px 5px; /* Réduit l'espacement intérieur (vertical et horizontal) */
+   text-align: center; /* Centre le texte */
+}
+
+.hours-table th {
+   background-color: rgb(39, 21, 73); /* Couleur de fond pour les en-têtes */
+   color: white; /* Couleur du texte pour les en-têtes */
+}
+
+
+
+.beer-list {
+   list-style-type: none; /* Supprime les puces */
+   padding: 0; /* Supprime le padding */
+}
+
+.beer-item {
+   background-color: #f2f2f2; /* Couleur de fond pour chaque bière */
+   margin: 5px 0; /* Espacement entre les éléments */
+   padding: 10px; /* Espacement intérieur */
+   border-radius: 5px; /* Coins arrondis */
+}
+
+.reservation-form {
+   margin: 20px 0; /* Espacement autour du formulaire */
+}
+
+
+footer {
+   background-color: rgb(39, 21, 73); /* Couleur du footer */
+   color: #fff; /* Couleur du texte */
+   text-align: center;
+   padding: 20px;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+}
+
+.footer-content {
+   display: flex; /* Utilisation de flexbox pour le contenu du footer */
+   justify-content: center; /* Centre le contenu */
+   align-items: center; /* Aligne verticalement */
+}
+
+#footer-logo {
+   margin-right: 20px; /* Espace entre le logo et le texte */
+   height: 50px; /* Ajustez la taille du logo */
+}
+
+footer a {
+   color: #fff; /* Couleur des liens */
+   text-decoration: none; /* Pas de soulignement */
+}
+
+footer a:hover {
+   text-decoration: underline; /* Souligne au survol */
+}

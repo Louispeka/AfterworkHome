@@ -1,0 +1,386 @@
+= Specification Fonctionnelle - AfterWork Project
+
+:description: Specification Fonctionnelle
+ifdef::env-vscode,env-gitlab[]
+include::../partials/_attributes.adoc[]
+endif::[]
+ifdef::env-site[]
+include::partial$_attributes.adoc[]
+endif::[]
+
+[abstract]
+{description}.
+
+== Introduction
+
+Dans le cadre de l'amélioration des services offerts aux étudiants et au personnel de notre école, nous proposons la création d'un site web innovant dédié au principe d’afterwork passant par la recherche d’un lieu conviviable pour travailler, à la découverte des bières disponibles dans les établissements aux alentours pour travailler dans les meilleures conditions. 
+
+Ce projet vise à simplifier l'expérience utilisateur en centralisant plusieurs fonctionnalités clés dans une interface conviviale et intuitive.
+
+Le site permettra aux utilisateurs de consulter en temps réel les bières disponibles dans les différents bars affiliés, de réserver des tables à l'avance, et de vérifier l'ouverture de ces établissements. Cette plateforme renforcera la visibilité des bars et encouragera les interactions sociales au sein de notre communauté.
+
+Avec l'essor des technologies numériques et la demande croissante pour des solutions en ligne pratiques, ce projet se positionne comme une réponse moderne et efficace aux besoins de notre école. Il représente non seulement un avantage pratique pour les utilisateurs, mais aussi une opportunité de renforcer les liens entre les étudiants, le personnel et les établissements locaux, tout en promouvant une culture conviviale et collaborative.
+
+
+
+=== Objectif
+
+L'objectif principal de ce projet est de développer une plateforme web dédiée à la communauté de notre école, facilitant la mise en place d’Afterwork en passant par une gestion simplifiée et centralisée des informations des bars locaux. Cette plateforme vise à offrir une expérience utilisateur fluide et intuitive en permettant aux étudiants et au personnel de faciliter la préparation d’afterwork entre eux.
+
+
+== Scope 
+
+Le scope du projet englobe l'ensemble des fonctionnalités, des ressources, et des contraintes nécessaires pour la conception, le développement, et le déploiement du site web dédié à la gestion d’afterwork aux différents bars locaux, à la consultation des bières disponibles et la reservation d'afterwork pour la communauté de l'école. Ce projet comprend les éléments suivants :
+
+=== Catalogue de Bières 
+
+Affichage d'une liste actualisée des bières disponibles dans chaque bar partenaire, avec des détails tels que le type, le degré d'alcool, la brasserie.
+
+=== Vérification de l'Ouverture des Bars
+
+Fonctionnalité permettant de consulter en temps réel l'état d'ouverture des bars (ouvert/fermé).
+
+
+
+=== Système de Réservation
+
+Interface permettant aux utilisateurs de réserver des tables dans les bars disponibles, avec une gestion des créneaux horaires et des confirmations sur la plateforme.
+
+== Workflow
+
+Le workflow du projet décrit les étapes clés et les processus par lesquels l'équipe de développement passera pour créer, tester et déployer le site web. Voici les principales phases du workflow:
+
+=== Phase de Planification
+
+**Réunion de Démarrage (Kickoff Meeting) :**
+
+Discussion sur les objectifs du projet, les exigences, et les attentes.
+
+Identification des parties prenantes et définition des rôles et responsabilités.
+
+**Collecte des Exigences :**
+
+Recueil des besoins fonctionnels et non fonctionnels auprès des utilisateurs finaux et des parties prenantes.
+
+Rédaction des spécifications techniques et fonctionnelles détaillées.
+
+**Conception de l'Architecture :**
+
+Définition de l'architecture du système (choix des technologies, structure des bases de données).
+
+Conception de l'interface utilisateur.
+
+=== Phase de Conception
+
+**Conception UI/UX :**
+
+Création de prototypes interactifs pour valider le design et l'expérience utilisateur.
+
+Révision et approbation des maquettes avant de passer au développement.
+
+**Conception Technique :**
+
+Élaboration des diagrammes de classes, des flux de données, et des diagrammes d'architecture.
+
+Planification des modules de backend et des points d'intégration si besoin et temps (API, services tiers).
+
+=== Phase de Développement
+
+**Développement Backend :**
+
+Mise en place du serveur, création des bases de données, et développement.
+
+Implémentation des fonctionnalités principales comme la gestion des réservationss, le catalogue de bières, et le système d'authentification.
+
+**Développement Frontend :**
+
+Création de l'interface utilisateur en intégrant les maquettes validées.
+
+Développement des composants interactifs (recherche, filtres, cartes).
+
+=== Phase de Tests
+
+**Tests Unitaires :**
+
+Test des composants individuels (frontend et backend) pour vérifier leur bon fonctionnement.
+
+**Tests d'Intégration :**
+
+Validation du bon fonctionnement des interactions entre les différentes parties du système (base de données, frontend).
+  
+**Tests Fonctionnels :**
+
+Vérification que toutes les fonctionnalités principales répondent aux exigences définies.
+
+=== Phase de Déploiement
+
+**Préparation au Déploiement :**
+
+Configuration de l'environnement de production (hébergement, sécurité).
+
+Vérification finale de l'application sur l'environnement de staging.
+
+**Déploiement Initial :**
+
+Mise en ligne du site web.
+
+Surveillance post-déploiement pour identifier et résoudre rapidement les problèmes potentiels.
+
+**Presentation et Documentation :**
+
+Distribution de la documentation utilisateur et des guides de support.
+
+
+== Stakeholders
+
+Les parties prenantes sont les individus, groupes ou organisations ayant un intérêt dans le projet et pouvant influencer ou être influencés par son déroulement et ses résultats. Voici les principales parties prenantes pour le projet de création du site web :
+
+=== L'École
+
+ - **Administration de l'École :**
+
+    - **Rôle :** Principal sponsor du projet, fournissant le financement et définissant les objectifs stratégiques.
+
+    - **Intérêt :** Améliorer les services offerts aux étudiants et au personnel, renforcer les liens avec la communauté locale.
+
+=== Étudiants et Personnel 
+
+  - **Étudiants :**
+
+    - **Rôle :** Utilisateurs finaux principaux du site pour réserver des tables, consulter les bières disponibles, et vérifier l'ouverture des bars.
+
+    - **Intérêt :** Accéder à une plateforme simple, rapide, et intuitive qui répond à leurs besoins en matière de sorties sociales.
+
+  - **Personnel de l'École :**
+
+    - **Rôle :** Utilisateurs finaux secondaires, pouvant utiliser le site de la même manière que les étudiants.
+
+    - **Intérêt :** Bénéficier d'un outil pratique pour organiser des sorties en groupe ou des événements.
+
+=== Bars locaux selectionnés
+
+  - **Propriétaires et Gérants des Bars :**
+
+    - **Rôle :** Fournir les informations sur les bières disponibles, les horaires d'ouverture, et gérer les réservations reçues via le site.
+
+    - **Intérêt :** Augmenter la visibilité de leur établissement, attirer plus de clients, et optimiser la gestion des réservations.
+
+=== Équipe de Développement
+
+  - **Chef de Projet :**
+
+    - **Rôle :** Responsable de la gestion globale du projet, de la planification à la livraison.
+
+    - **Intérêt :** Assurer que le projet est livré dans les délais et répond aux exigences de qualité.
+
+  - **Développeurs (Frontend et Backend) :**
+
+    - **Rôle :** Conception, développement, et intégration des différentes fonctionnalités du site.
+
+    - **Intérêt :** Créer un produit fonctionnel et sécurisé, en respectant les meilleures pratiques de développement.
+
+  - **Designer UX/UI :**
+
+    - **Rôle :** Conception de l'interface utilisateur et optimisation de l'expérience utilisateur.
+
+    - **Intérêt :** Assurer que le site est attrayant, facile à utiliser, et répond aux attentes des utilisateurs.
+
+  - **Testeurs QA :**
+
+    - **Rôle :** Identifier et signaler les bugs, assurer la qualité et la fiabilité du produit final.
+
+    - **Intérêt :** Garantir que le site est exempt de défauts majeurs avant son déploiement.
+
+=== Fournisseurs de Services Tiers
+
+
+  - **Services d'Hébergement Web :**
+
+    - **Rôle :** Fournir l'infrastructure pour héberger le site.
+
+    - **Intérêt :** Offrir une plateforme stable, performante, et sécurisée pour garantir un bon fonctionnement du site.
+
+=== Régulateurs
+
+  - **Autorités de Régulation (ex. RGPD) :**
+
+    - **Rôle :** Veiller au respect des régulations en matière de protection des données et de la vie privée.
+
+    - **Intérêt :** Assurer que le site respecte les lois et règlements en vigueur, notamment la protection des données personnelles des utilisateurs.
+
+Ces parties prenantes joueront toutes un rôle clé dans le succès du projet, nécessitant une communication et une collaboration efficaces pour garantir que les besoins de chacun sont satisfaits et que le site web atteint ses objectifs.
+
+== Deliverable
+
+Les livrables sont les résultats concrets produits au cours du projet, destinés à démontrer la progression et la qualité du travail réalisé. Pour le projet de création du site web AfterWork, les principaux livrables sont les suivants :
+
+=== Specification fonctionnelle et technique
+
+Document listant les exigences fonctionnelles et techniques du site, incluant les cas d'utilisation et les besoins des utilisateurs.
+
+=== User guide
+
+Le user guide permets de guider l'utilisateur lors de sa première visite, il explique les différentes options proposées par le site web.
+
+== User interface
+
+L'interface utilisateur est sous la forme d'une application web facilitant la prise en main sur la plupart des appreils de marché.
+
+
+== Prerequisites
+
+Pour assurer le bon déroulement du projet de création du site web, il est essentiel d'identifier les prérequis et les dépendances. Ces éléments doivent être en place ou pris en compte avant de démarrer certaines phases du projet.
+
+
+**Engagement des Parties Prenantes :**
+
+Une validation claire des objectifs, du scope, et des exigences par les parties prenantes principales (administration de l'école, bars) est nécessaire pour assurer que le projet répond à leurs attentes.
+
+
+**Infrastructure Technique :**
+
+Une infrastructure technique de base doit être en place, incluant les serveurs de développement, de staging, et de production, ainsi que les outils de gestion de projet et de versionnement (ex. GitHub).
+
+**Spécifications Fonctionnelles et Techniques :**
+
+Les exigences détaillées du projet doivent être bien définies et documentées avant de commencer le développement, pour éviter les retards et les malentendus.
+
+////////////////////// //// //// //// //// //// //// //// ????? //// //// //// //// ////
+**Accès aux Données des Bars Partenaires :**
+Un accord avec les bars partenaires pour fournir régulièrement les informations sur les bières disponibles, les horaires, et l’état d’ouverture est essentiel pour que le site soit fonctionnel.
+//////////////////////// //// //// //// //// //// //// //// ????? //// //// //// //// 
+
+
+
+**Licences et Outils de Développement :**
+
+Tous les outils de développement nécessaires (environnements de développement intégrés, licences logicielles, accès aux APIs tierces) doivent être acquis et configurés.
+
+
+**Conformité aux Régulations :**
+
+Avant de traiter les données des utilisateurs, le site doit être conforme aux régulations en matière de protection des données (ex. RGPD), avec les politiques de confidentialité et les mécanismes de consentement en place.
+
+== Dependencies 
+
+**Coordination avec les Bars Partenaires :**
+
+La disponibilité et l'exactitude des données fournies par les bars (listes de bières, horaires, etc.) sont critiques pour le bon fonctionnement du site. Des retards ou des erreurs de leur part peuvent affecter la qualité de l'expérience utilisateur.
+
+
+**Infrastructure d'Hébergement :**
+
+Dépendance envers le fournisseur d'hébergement choisi pour garantir la disponibilité, la sécurité, et les performances du site. Tout problème avec l'infrastructure d'hébergement peut entraîner des interruptions de service.
+
+
+**Outils et Technologies de Développement :**
+
+La dépendance envers les technologies choisies pour le frontend, le backend, et la base de données. Les bugs ou les limitations dans ces technologies peuvent nécessiter des ajustements ou des solutions de contournement.
+
+**Équipe de Développement :**
+
+Disponibilité et compétences de l'équipe de développement. Des absences ou des manques de compétences spécifiques peuvent ralentir le projet.
+
+
+
+
+== Requirements Fonctionnels et Non Fonctionnels
+Les exigences du projet sont divisées en deux catégories principales : les exigences fonctionnelles, qui définissent ce que le système doit faire, et les exigences non fonctionnelles, qui décrivent les critères de performance, de sécurité, et d'autres qualités que le système doit respecter.
+
+=== Requirements Fonctionnels
+
+**Consultation des Bières Disponibles :**
+
+Le site doit permettre aux utilisateurs de consulter la liste des bières disponibles dans chaque bar disponible, avec des détails tels que le nom, la description, le type, le degré d'alcool, et la brasserie.
+
+**Système de Réservation :**
+
+Les utilisateurs doivent pouvoir réserver des tables dans les bars partenaires via le site, en sélectionnant le bar, la date, l’heure, et le nombre de places.
+
+Les utilisateurs doivent recevoir une confirmation de leur réservation sur la plateforme
+
+
+
+
+**Vérification des Horaires d'Ouverture :**
+
+Le site doit permettre aux utilisateurs de vérifier en temps réel si un bar est ouvert ou fermé, en fonction des horaires d'ouverture renseignés par le bar.
+
+
+
+**Authentification et Gestion des Comptes :**
+
+Les utilisateurs doivent pouvoir créer un compte, se connecter, et gérer leurs informations personnelles (nom, email, mot de passe).
+
+Le site doit permettre aux utilisateurs de visualiser leurs réservations et de pouvoir les supprimer.
+
+
+
+**Gestion des Bars Partenaires :**
+
+Les administrateurs du site doivent pouvoir ajouter, modifier, ou supprimer des bars partenaires, ainsi que gérer les informations relatives aux bières disponibles et aux horaires d’ouverture.
+
+
+
+=== Requirements Non Fonctionnels :
+
+**Performance :**
+
+Le site doit charger les pages principales (liste des bars, détails des bières, système de réservation) en moins de 2 secondes pour garantir une bonne expérience utilisateur.
+
+
+**Scalabilité :**
+
+L'architecture du site doit être conçue pour supporter une augmentation du nombre d’utilisateurs et de bars partenaires, avec la possibilité d'ajouter des serveurs ou d'augmenter les capacités de stockage sans interruption de service.
+
+**Sécurité :**
+
+Toutes les communications entre le site et les utilisateurs doivent être cryptées via HTTPS.
+
+Les informations sensibles (ex. mots de passe, données personnelles) doivent être stockées de manière sécurisée, avec un chiffrement conforme aux normes de l'industrie.
+
+
+**Conformité :**
+
+Le site doit respecter les régulations en matière de protection des données personnelles, notamment le RGPD, avec des mécanismes de consentement pour la collecte et l’utilisation des données.
+
+**Compatibilité :**
+
+Le site doit être compatible avec les navigateurs web modernes (Chrome, Firefox, Safari, Edge) et s’adapter aux différents types d’appareils (ordinateurs, tablettes, smartphones).
+
+Le site doit être responsive, offrant une expérience utilisateur optimale quel que soit l'appareil utilisé.
+
+
+
+**Maintenance et Extensibilité :**
+
+Le code du site doit être bien documenté pour faciliter les futures maintenances et mises à jour.
+
+La structure du site doit permettre l'ajout facile de nouvelles fonctionnalités ou l’intégration de nouveaux services sans nécessiter une refonte majeure.
+
+Ces exigences fonctionnelles et non fonctionnelles servent de guide pour la conception, le développement, et le déploiement du site, garantissant qu'il répond aux besoins des utilisateurs tout en respectant les standards de qualité et de performance.
+
+
+== Nouvelles fonctionnalités en cours de recherche
+
+=== Recherche et Filtres
+
+Outils de recherche et de filtrage pour trouver rapidement un bar ou une bière spécifique en fonction de critères tels que la localisation, le type de bière, etc.
+
+=== Carte Interactive 
+
+Intégration d'une carte interactive affichant les bars partenaires, permettant aux utilisateurs de voir leur emplacement géographique et d'accéder rapidement aux informations pertinentes.
+
+=== Système de Feedback 
+
+Les utilisateurs doivent pouvoir laisser des avis et des notes sur les bières et les bars, et ces avis doivent être visibles par d'autres utilisateurs.
+
+///////////////////// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// ////
+
+=== Fiabilité et Disponibilité
+
+Le site doit être disponible 24/7 avec un taux de disponibilité minimum de 99,9%.
+
+En cas de panne, le site doit pouvoir être restauré dans un délai maximum de 2 heures.
+
+///////////////////// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// //// ////
